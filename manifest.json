@@ -1,7 +1,7 @@
 {
   "name": "MySMAGV2_APIV2",
   "author": "Zendesk",
-  "version": "2.0.12111",
+  "version": "2.0.12112",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -204,14 +204,7 @@
           "type": "file",
           "description": "logo_description",
           "label": "logo_label"
-        },
-        {
-          "identifier": "Recette",
-          "type": "checkbox",
-          "description": "Recette",
-          "label": "Recette ?",
-		  "value": false
-        },
+        }
 		{
           "identifier": "favicon",
           "type": "file",
@@ -220,6 +213,17 @@
         }
       ]
     },
+	{
+      "label": "Type d'environnement",
+      "variables": [
+	  {
+          "identifier": "Recette",
+          "type": "checkbox",
+          "description": "Recette",
+          "label": "Recette ?",
+		  "value": false
+        }
+	},
     {
       "label": "images_group_label",
       "variables": [
