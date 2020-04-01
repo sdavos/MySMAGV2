@@ -17,7 +17,7 @@
     </button>
     <nav class="user-nav" id="user-nav">
       <!--{{link 'community'}}-->
-	  {{#if {{page_path 'help_center'}} == "https://agreo-recette.zendesk.com/hc/fr"}}
+	  {{#if settings.recette}}
 	  
       {{link 'new_request' class='submit-a-request'}}
       {{/if}}
