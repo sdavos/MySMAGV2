@@ -1,3 +1,11 @@
+#category_id_360000534838 {
+background-image: url($assets-agreo_orange-svg);
+}
+
+#category_id_360000534838:hover {
+background-image: url($assets-agreo_blanc-svg);
+}
+
 /*** AFFICHAGE DES ICONES CATEGORIES HOME PAGE ***/
 .amontCollecte{
   overflow: auto;
