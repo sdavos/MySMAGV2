@@ -1,4 +1,4 @@
-  if (window.location.href == window.location+$('html').attr('lang').toLowerCase()+"") {
+  if (window.location.href == window.location) {
     // MW-Notification Banner
    $.get( "/api/v2/help_center/"+$('html').attr('lang').toLowerCase()+"/articles.json?label_names=alert" ).done(function( data ) {
      
