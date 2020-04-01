@@ -1,4 +1,6 @@
 {
+  "enviro_type": "Type d'environnement",
+  "recette": "Recette",
   "colors_group_label": "Couleurs",
   "brand_color_description": "Couleur de la marque pour les principaux éléments de navigation",
   "brand_color_label": "Couleur de la marque",
