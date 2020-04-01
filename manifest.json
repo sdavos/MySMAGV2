@@ -209,7 +209,7 @@
           "identifier": "Recette",
           "type": "checkbox",
           "description": "Recette",
-          "label": "Recette ?"
+          "label": "Recette ?",
 		  "value": false
         },
 		{
