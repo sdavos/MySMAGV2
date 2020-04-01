@@ -16,9 +16,17 @@
       </svg>
     </button>
     <nav class="user-nav" id="user-nav">
+<<<<<<< Updated upstream
       <!--{{link 'community'}}
       {{link 'new_request' class='submit-a-request'}}-->
       
+=======
+      <!--{{link 'community'}}-->
+	  {{#if settings.new_from_header}}
+	  
+      {{link 'new_request' class='submit-a-request'}}
+      {{/if}}
+>>>>>>> Stashed changes
       {{#if alternative_locales}}
         <div class="dropdown language-selector">{{current_locale.name}}
           <button class="dropdown-toggle language-selector" aria-haspopup="true">

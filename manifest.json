@@ -3,8 +3,24 @@
   "author": "Zendesk",
   "version": "2.0.0",
   "api_version": 2,
+<<<<<<< Updated upstream
   "default_locale": "en-us",
   "settings": [
+=======
+  "default_locale": "fr",
+  "settings": [{
+      "label": "divers_group_label",
+      "variables": [
+	  {
+          "identifier": "new_from_header",
+          "type": "checkbox",
+          "description": "envoyer_une_demande_description",
+          "label": "envoyer_une_demande_label",
+		  "value": false
+        }
+		]
+	},
+>>>>>>> Stashed changes
     {
       "label": "colors_group_label",
       "variables": [
