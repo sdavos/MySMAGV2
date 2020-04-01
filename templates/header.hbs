@@ -17,8 +17,10 @@
     </button>
     <nav class="user-nav" id="user-nav">
       <!--{{link 'community'}}-->
+	  {{#if {{page_path 'help_center'}} == "https://agreo-recette.zendesk.com/hc/fr"}}
+	  
       {{link 'new_request' class='submit-a-request'}}
-      
+      {{/if}}
       {{#if alternative_locales}}
         <div class="dropdown language-selector">{{current_locale.name}}
           <button class="dropdown-toggle language-selector" aria-haspopup="true">

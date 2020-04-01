@@ -1,7 +1,7 @@
 {
   "name": "MySMAGV2_APIV2",
   "author": "Zendesk",
-  "version": "2.0.1211",
+  "version": "2.0.12111",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -206,6 +206,13 @@
           "label": "logo_label"
         },
         {
+          "identifier": "Recette",
+          "type": "checkbox",
+          "description": "Recette",
+          "label": "Recette ?"
+		  "value": false
+        }
+		{
           "identifier": "favicon",
           "type": "file",
           "description": "favicon_description",
