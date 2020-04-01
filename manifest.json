@@ -5,13 +5,13 @@
   "api_version": 2,
   "default_locale": "fr",
   "settings": [{
-      "label": "enviro_type",
+      "label": "divers_group_label",
       "variables": [
 	  {
-          "identifier": "recette",
+          "identifier": "new_from_header",
           "type": "checkbox",
-          "description": "recette",
-          "label": "recette",
+          "description": "envoyer_une_demande_description",
+          "label": "envoyer_une_demande_label",
 		  "value": false
         }
 		]
