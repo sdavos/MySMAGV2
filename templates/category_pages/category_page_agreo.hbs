@@ -1,0 +1,104 @@
+<div class="container">
+  <nav class="sub-nav">
+    {{breadcrumbs}}
+  </nav>
+{{#is category.name "AGREO"}}
+  <!-- AFFICHE TITRE CATEGORIE -->
+  <div class="category-container">
+    <div class="category-content">
+      <header class="page-header">
+      <h1>{{category.name}}</h1>
+      </header>
+      <div class="section-tree">
+        {{#each sections}}
+          {{#is name 'Informations produit'}}
+            <section class="section">
+            <h3 class="page-section-tree-title">
+            	<a href='{{url}}' class="page-section-tree-title"> <span class="page-section-tree-title"> {{name}} </span> </a>
+            </h3>
+            {{#if articles}}
+              <ul class="article-list">
+                {{#each articles}}
+                  <li class="article-list-item{{#if promoted}} article-promoted{{/if}}">
+                    {{#if promoted}} <span data-title="{{t 'promoted'}}" class="icon-star"></span> {{/if}}
+                    <a href="{{url}}" class="article-list-link">{{title}}</a>
+                    {{#if internal}} <span class="icon-lock" title="{{t 'internal'}}"></span> {{/if}}
+                  </li>
+                {{/each}}
+              </ul>
+              {{#if more_articles}}
+              	<a href="{{url}}" class="see-all-articles"> {{t 'show_all_articles' count=article_count}} </a>
+              {{/if}}
+            {{/if}}
+            </section>
+          {{/is}}
+          {{#is name 'Foire aux questions'}}
+            <section class="section">
+            <h3 class="page-section-tree-title">
+            	<a href='{{url}}' class="page-section-tree-title"> <span class="page-section-tree-title"> {{name}} </span> </a>
+            </h3>
+            {{#if articles}}
+              <ul class="article-list">
+                {{#each articles}}
+                  <li class="article-list-item{{#if promoted}} article-promoted{{/if}}">
+                    {{#if promoted}} <span data-title="{{t 'promoted'}}" class="icon-star"></span> {{/if}}
+                    <a href="{{url}}" class="article-list-link">{{title}}</a>
+                    {{#if internal}} <span class="icon-lock" title="{{t 'internal'}}"></span> {{/if}}
+                  </li>
+                {{/each}}
+              </ul>
+              {{#if more_articles}}
+              	<a href="{{url}}" class="see-all-articles"> {{t 'show_all_articles' count=article_count}} </a>
+              {{/if}}
+            {{/if}}
+            </section>
+          {{/is}}
+        {{/each}}
+      </div>
+      
+      <!--ZONE REPARTITION DES SECTIONS VIGNE&VIN-->
+      
+     
+      
+
+
+      
+
+
+      
+        {{#each sections}}
+          {{#is name "Vigne & Vin"}}
+               <div class="vigneVin"> <img src="{{asset 'iconVigneVin.svg'}}" /> <h2>Vigne & Vin</h2> </div>
+            {{#if sections}}
+                 <div class="section-tree"> {{#each sections}}
+             			<ul class="blocks-item"> <li class="blocks-item-link"><a href="{{url}}">{{name}}</a></li> </ul> {{/each}} <div class="section-tree">
+        		{{/if}}
+          {{else}}
+          {{#is name "Usine"}}
+           <div class="usine"> <img src="{{asset 'iconUsine.svg'}}" /> <h2>Usine</h2></div>
+                   {{#if sections}}
+                 <div class="section-tree"> {{#each sections}}
+             			<ul class="blocks-item"> <li class="blocks-item-link"><a href="{{url}}">{{name}}</a></li> </ul> {{/each}} <div class="section-tree">
+        		{{/if}}
+          {{else}}
+                   {{#is name "Amont & Collecte"}}
+                   <div class="amontCollecte"> <img src="{{asset 'iconAmontCollecte.svg'}}" /> <h2>Amont & Collecte</h2></div>
+                   {{#if sections}}
+                 <div class="section-tree"> {{#each sections}}
+             			<ul class="blocks-item"> <li class="blocks-item-link"><a href="{{url}}">{{name}}</a></li> </ul> {{/each}} <div class="section-tree">
+        		{{/if}}
+                   {{else}}
+
+             			<!--<ul class="blocks-item"> <li class="blocks-item-link"><a href="{{url}}">{{name}}</a></li> </ul> -->
+
+                   {{/is}}
+          {{/is}}
+          {{/is}}
+        {{/each}}
+        
+      </div>
+                   
+    </div>
+  </div>
+                   {{/is}}
+</div>
