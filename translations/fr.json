@@ -1,10 +1,7 @@
 {
-<<<<<<< Updated upstream
-=======
   "divers_group_label": "Paramétrages divers",
   "envoyer_une_demande_label": "Envoyer une demande depuis Header",
   "envoyer_une_demande_description": "Ce paramètre permet de définir si l'on permet d'Envoyer une demande depuis le Header de centre d'aide",
->>>>>>> Stashed changes
   "colors_group_label": "Couleurs",
   "brand_color_description": "Couleur de la marque pour les principaux éléments de navigation",
   "brand_color_label": "Couleur de la marque",

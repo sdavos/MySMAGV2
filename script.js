@@ -1,4 +1,4 @@
-  if (window.location.href == "https://preprod.mysmag.tech/hc/"+$('html').attr('lang').toLowerCase()+"") {
+  if (window.location.href == window.location.origin+"/hc/"+$('html').attr('lang').toLowerCase()+"") {
     // MW-Notification Banner
    $.get( "/api/v2/help_center/"+$('html').attr('lang').toLowerCase()+"/articles.json?label_names=alert" ).done(function( data ) {
      
