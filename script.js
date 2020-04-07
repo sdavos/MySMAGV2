@@ -4,7 +4,7 @@
      
    $.each(data.articles, function(index,item) {
      
-     var style1 = '<div class="ns-box ns-bar ns-effect-slidetop ns-type-notice ns-show"><div class="ns-box-inner"><span class="megaphone"></span></i><p><a href="'+ item.html_url + '">' + item.title + '</a>' + item.body + '</p><span class="ns-close"></span></div></div>'
+     var style1 = '<div class="ns-box ns-bar ns-effect-slidetop ns-type-notice ns-show"><div class="ns-box-inner"><span class="megaphone"></span></i><p><a href="'+ item.html_url + '">' + item.title + '</a></p><span class="ns-close"></span></div></div>'
            
      $('.alertbox').append(style1);
    });
