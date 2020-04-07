@@ -1,15 +1,7 @@
-#category_id_360000534838 {
-background-image: url($assets-agreo_orange-svg);
-}
-
-#category_id_360000534838:hover {
-background-image: url($assets-agreo_blanc-svg);
-}
 
 /*** AFFICHAGE DES ICONES CATEGORIES HOME PAGE ***/
 .amontCollecte{
   overflow: auto;
-  margin-top: 40px;
 }
 
 .amontCollecte img {
@@ -1533,7 +1525,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   min-height: 50px;
   padding-bottom: 15px;
 }
@@ -1579,7 +1571,7 @@ ul {
   display: flex;
   flex: 1 0 240px;
   margin: 0 0 30px;
-  max-width: 100%;
+  max-width: 270px;
   height:100px;
   text-align: center;
 }
@@ -1591,7 +1583,7 @@ ul {
   display: flex;
   flex: 1 0 240px;
   margin: 0 0 30px;
-  max-width: 100%;
+  max-width: 270px;
   height:100px;
   text-align: center;
 }
@@ -1668,7 +1660,7 @@ ul {
 
 @media (min-width: 768px) {
   .section {
-    margin-bottom: 60px;
+    /**margin-bottom: 60px;**/
   }
 }
 
@@ -1868,7 +1860,7 @@ display: none;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
+  
 }
 
 @media (min-width: 768px) {

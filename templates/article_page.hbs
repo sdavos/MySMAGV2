@@ -1,4 +1,4 @@
-<div class="container-divider"></div>
+
 <div class="container">
   <nav class="sub-nav">
     {{breadcrumbs}}
@@ -157,17 +157,8 @@
       </footer>
  <div class="article-more-questions">
           {{dc 'more_questions'}}
-      {{#link 'new_request' class='submit-a-request'}}{{dc 'contact_us'}}{{/link}}
+      <a class="article-subscribe" href="https://smag-group.zendesk.com/hc/requests/new">Contactez-nous</a>
         </div>
-      
-      <div class="article-relatives">
-        {{#if settings.show_recently_viewed_articles}}
-          {{recent_articles}}
-        {{/if}}
-        {{#if settings.show_related_articles}}
-          {{related_articles}}
-        {{/if}}
-      </div>
       {{#if settings.show_article_comments}}
         <div class="article-comments" id="article-comments">
           <section class="comments">
@@ -285,6 +276,15 @@
           </section>
         </div>
       {{/if}}
+      <div class="article-relatives">
+        {{#if settings.show_recently_viewed_articles}}
+          {{recent_articles}}
+        {{/if}}
+        {{#if settings.show_related_articles}}
+          {{related_articles}}
+        {{/if}}
+      </div>
+      
     </article>
   </div>
 </div>

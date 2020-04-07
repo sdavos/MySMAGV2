@@ -83,6 +83,11 @@
             </li>
           {{/each}}
         </ul>
+		{{#if section.more_articles}}
+            <a href="{{section.url}}" class="see-all-articles">
+              {{t 'show_all_articles' count=section.article_count}}
+            </a>
+            {{/if}}
       {{else}}
     <!--    <i class="section-empty">
           <a href="{{section.url}}">{{t 'empty'}}</a>

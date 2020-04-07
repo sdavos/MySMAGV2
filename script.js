@@ -1,15 +1,18 @@
-  if (window.location.href == window.location.origin+"/hc/"+$('html').attr('lang').toLowerCase()+"") {
+  if (window.location.href == "https://preprod.mysmag.tech/hc/"+$('html').attr('lang').toLowerCase()+"" && localStorage.getItem("isClosed") != "true") {
     // MW-Notification Banner
    $.get( "/api/v2/help_center/"+$('html').attr('lang').toLowerCase()+"/articles.json?label_names=alert" ).done(function( data ) {
      
    $.each(data.articles, function(index,item) {
      
-     var style1 = '<div class="ns-box ns-bar ns-effect-slidetop ns-type-notice ns-show"><div class="ns-box-inner"><span class="megaphone"></span></i><p><a href="'+ item.html_url + '">' + item.title + '</a></p><span class="ns-close"></span></div></div>'
+     var style1 = '<div class="ns-box ns-bar ns-effect-slidetop ns-type-notice ns-show"><div class="ns-box-inner"><span class="megaphone"></span></i><p><a href="'+ item.html_url + '">' + item.title + '</a>' + item.body + '</p><span class="ns-close"></span></div></div>'
            
      $('.alertbox').append(style1);
    });
    $('.ns-close').on('click',function(){
     $(".alertbox").remove();
+     localStorage.setItem("isClosed", "true");
+
+
   });
     
   });
