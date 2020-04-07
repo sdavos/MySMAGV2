@@ -1,4 +1,4 @@
-  if (window.location.href == "https://preprod.mysmag.tech/hc/"+$('html').attr('lang').toLowerCase()+"" && localStorage.getItem("isClosed") != "true") {
+  if (window.location.href == "https://preprod.mysmag.tech/hc/"+$('html').attr('lang').toLowerCase()+"" && localStorage.getItem("isClosed") == null && localStorage.getItem("isClosed") != "true") {
     // MW-Notification Banner
    $.get( "/api/v2/help_center/"+$('html').attr('lang').toLowerCase()+"/articles.json?label_names=alert" ).done(function( data ) {
      
