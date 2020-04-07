@@ -40,10 +40,12 @@
       <ul class="blocks-list">
         {{#each categories}}
           {{#if ../has_multiple_categories}}
+        {{#is name 'Alertes'}}
+        {{else}} 
             <li class="blocks-item">
              
                 {{#is name 'Agreo'}}
-                    <a href='{{url}}' class="logoCategory" style="background-image: url({{asset 'agreo_orange.svg'}})" onmouseover="this.style.backgroundImage='url({{asset 'agreo_blanc.svg'}})';" onmouseout="this.style.backgroundImage='url({{asset 'agreo_orange.svg'}})';" > </a>
+                    <a href='{{url}}' class="logoCategory" style="background-image: url({{asset id  suffix='_orange.svg'}})" onmouseover="this.style.backgroundImage='url({{asset id suffix='_blanc.svg'}})';" onmouseout="this.style.backgroundImage='url({{asset id suffix='_orange.svg'}})';" > </a>
                     {{else}} {{#is name "Diagnostic"}}
                        <a href='{{url}}' class="logoCategory" style="background-image: url({{asset 'smag_diag_orange.svg'}})" onmouseover="this.style.backgroundImage='url({{asset 'smag_diag_blanc.svg'}})';" onmouseout="this.style.backgroundImage='url({{asset 'smag_diag_orange.svg'}})';" > </a>
 
@@ -53,7 +55,7 @@
                        <a href='{{url}}' class="logoCategory" style="background-image: url({{asset 'smag_expert_orange.svg'}})" onmouseover="this.style.backgroundImage='url({{asset 'smag_expert_blanc.svg'}})';" onmouseout="this.style.backgroundImage='url({{asset 'smag_expert_orange.svg'}})';" > </a>
 
                     {{else}} {{#is name "Smag Bovin"}}
-                       <a href='{{url}}' class="logoCategory" style="background-image: url({{asset 'bovin_bleu.svg'}})" onmouseover="this.style.backgroundImage='url({{asset 'bovin_blanc.svg'}})';" onmouseout="this.style.backgroundImage='url({{asset 'bovin_bleu.svg'}})';" > </a>
+                       <a href='{{url}}' class="logoCategory" style="background-image: url({{asset id  suffix='_orange.svg'}})" onmouseover="this.style.backgroundImage='url({{asset id  suffix='_blanc.svg'}})';" onmouseout="this.style.backgroundImage='url({{asset id suffix='_orange.svg'}})';" > </a>
                     {{else}} {{#is name "LEA"}}
                        <a href='{{url}}' class="logoCategory" style="background-image: url({{asset 'LEA_vert.svg'}})" onmouseover="this.style.backgroundImage='url({{asset 'LEA_blanc.svg'}})';" onmouseout="this.style.backgroundImage='url({{asset 'LEA_vert.svg'}})';" > </a>
                     {{else}} {{#is name "DATALABS"}}
@@ -62,6 +64,7 @@
                     <a href='{{url}}' class="testOther blocks-item-link">{{name}}</a>  {{/is}} {{/is}} {{/is}} {{/is}} {{/is}} {{/is}} {{/is}}
               
             </li>
+        {{/is}}
           {{else}}
             {{#each sections}}
               <li class="blocks-item">
