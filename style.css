@@ -1865,7 +1865,7 @@ display: none;
 
 @media (min-width: 1024px) {
   .category-content {
-    flex: 1 1 100%;
+    flex: 1 0 100%;
   }
 }
 
@@ -1888,7 +1888,7 @@ display: none;
 
 @media (min-width: 768px) {
   .section-tree .section {
-    flex: 1 1 45%;
+    flex: 1 0 45%;
     /* Two columns for tablet and desktop. Leaving 5% separation between columns */
   }
 }
@@ -1934,7 +1934,7 @@ display: none;
 
 @media (min-width: 1024px) {
   .section-content {
-    flex: 0 0 100%;
+    flex: 1 0 100%;
   }
 }
 
