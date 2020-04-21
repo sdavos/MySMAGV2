@@ -1584,7 +1584,7 @@ ul {
   display: flex;
   flex: 1 0 240px;
   margin: 0 0 30px;
-  max-width: 100%;
+  max-width: 240px;
   height:100px;
   text-align: center;
 }
@@ -1596,7 +1596,7 @@ ul {
   display: flex;
   flex: 1 0 240px;
   margin: 0 0 30px;
-  max-width: 100%;
+  max-width: 240px;
   height:100px;
   text-align: center;
 }
