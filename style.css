@@ -1888,6 +1888,13 @@ display: none;
 
 @media (min-width: 768px) {
   .section-tree .section {
+    flex: 0 0 33%;
+    /* Two columns for tablet and desktop. Leaving 5% separation between columns */
+  }
+}
+
+@media (min-width: 768px) {
+  .section-top .section {
     flex: 1 0 33%;
     /* Two columns for tablet and desktop. Leaving 5% separation between columns */
   }
