@@ -19,7 +19,10 @@
           <div class="section-subscribe">{{subscribe}}</div>
         {{/if}}
         {{#if section.description}}
-          <p class="page-header-description">{{section.description}}</p>
+		
+          <p class="page-header-description">{{#is section.description 'ontop'}}
+		{{else}}{{section.description}}{{/is}}</p>
+		  
         {{/if}}
         
       </header>

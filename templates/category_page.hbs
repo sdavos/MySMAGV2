@@ -9,8 +9,8 @@
       {{search submit=false}}
       </div>-->
 </nav>
-{{#is category.name "Agreo"}}
-<!-- AFFICHE TITRE CATEGORIE -->
+{{#is category.id 115000817009}}
+<!--AGREO-->
 <div class="category-container">
    <div class="category-content">
       <header class="page-header">
@@ -21,28 +21,7 @@
       </header>
       <div class="section-tree">
          {{#each sections}}
-         {{#is name 'Nouveautés produit'}}
-         <section class="section">
-            <h3 class="page-section-tree-title">
-               <a href='{{url}}' class="page-section-tree-title"> <span class="page-section-tree-title"> {{name}} </span> </a>
-            </h3>
-            {{#if articles}}
-            <ul class="article-list">
-               {{#each articles}}
-               <li class="article-list-item{{#if promoted}} article-promoted{{/if}}">
-                  {{#if promoted}} <span data-title="{{t 'promoted'}}" class="icon-star"></span> {{/if}}
-                  <a href="{{url}}" class="article-list-link">{{title}}</a>
-                  {{#if internal}} <span class="icon-lock" title="{{t 'internal'}}"></span> {{/if}}
-               </li>
-               {{/each}}
-            </ul>
-            {{#if more_articles}}
-            <a href="{{url}}" class="see-all-articles"> {{t 'show_all_articles' count=article_count}} </a>
-            {{/if}}
-            {{/if}}
-         </section>
-         {{/is}}
-         {{#is name 'Foire aux questions'}}
+         {{#is description 'ontop'}}
          <section class="section">
             <h3 class="page-section-tree-title">
                <a href='{{url}}' class="page-section-tree-title"> <span class="page-section-tree-title"> {{name}} </span> </a>
@@ -66,11 +45,12 @@
          {{/each}}
       </div>
       <!--ZONE REPARTITION DES SECTIONS VIGNE & VIN USINE AMONT & COLLECTE-->
+	  <!--vigneVin-->
       {{#each sections}}
-      {{#is name "Vigne & Vin"}}
+      {{#is id 360002080817}}
       <div class="vigneVin">
          <img src="{{asset 'iconVigneVin.svg'}}" /> 
-         <h2>Vigne & Vin</h2>
+         <h2>{{dc 'vigne_vin'}}</h2>
       </div>
       {{#if sections}}
       <div class="section-tree">
@@ -87,10 +67,11 @@
       </div>
       {{/if}}
       {{else}}
-      {{#is name "Usine"}} 
+	  <!--usine-->
+      {{#is id 360002100358}} 
       <div class="usine">
          <img src="{{asset 'iconUsine.svg'}}" /> 
-         <h2>Usine</h2>
+         <h2>{{dc 'usine'}}</h2>
       </div>
       {{#if sections}}
       <div class="section-tree">
@@ -107,10 +88,11 @@
       </div>
       {{/if}}
       {{else}}
-      {{#is name "Amont & Collecte"}}
+	  <!--amontCollecte-->
+      {{#is id 360002080777}}
       <div class="amontCollecte">
          <img src="{{asset 'iconAmontCollecte.svg'}}" /> 
-         <h2>Amont & Collecte</h2>
+         <h2>{{dc 'amont_collecte'}}</h2>
       </div>
       {{#if sections}}
       <div class="section-tree">
@@ -131,26 +113,29 @@
       {{/is}}
       {{/is}}
       {{/each}}
-     <div id="SDS" class="amontCollecte" style="visibility: hidden;">
+     <div id="divers" class="amontCollecte" style="visibility: hidden;">
          
-         <h2>Divers</h2>
+         <h2>{{dc 'divers'}}</h2>
       </div>
      <div class="section-tree">
      {{#each sections}}
-     {{#is name 'Nouveautés produit'}}
+	{{#is description 'ontop'}}
+       
+          {{else}}
+		  <!--amontCollecte-->
+     {{#is id 360002080777}}
      {{else}}
-     {{#is name 'Foire aux questions'}}
+	 <!--usine-->
+     {{#is id 360002100358}}
      {{else}}
-     {{#is name 'Amont & Collecte'}}
+	 <!--vigneVin-->
+     {{#is id 360002080817}}
      {{else}}
-     {{#is name 'Usine'}}
-     {{else}}
-     {{#is name 'Vigne & Vin'}}
-     {{else}}
+	 <!--autre-->
       {{#if sections}}
      <script type="text/javascript">
 function Show (addr) { document.getElementById(addr).style.visibility = "visible";	}
-window.onload = function () { Show("SDS");	};
+window.onload = function () { Show("divers");	};
 </script>
      <li class="blocks-item">
             <a href='{{url}}' class="blocks-item-link">
@@ -164,7 +149,7 @@ window.onload = function () { Show("SDS");	};
      {{#if articles}}
      <script type="text/javascript">
 function Show (addr) { document.getElementById(addr).style.visibility = "visible";	}
-window.onload = function () { Show("SDS");	};
+window.onload = function () { Show("divers");	};
 </script>
 <li class="blocks-item">
             <a href='{{url}}' class="blocks-item-link">
@@ -178,55 +163,25 @@ window.onload = function () { Show("SDS");	};
      {{/is}}
       {{/is}}
      {{/is}}
-     {{/is}}
       {{/is}}
      {{/each}}
        </div>
    </div>
 </div>
+<!--AUTRE QUE AGREO-->
 {{else}}
 <div class="category-container">
    <div class="category-content">
       <header class="page-header">
          <h1>{{category.name}}</h1>
          {{#if category.description}}
-          <p class="page-header-description">{{category.description}}</p>
+          <p class="page-header-description">
+		  {{category.description}}</p>
          {{/if}}
       </header>
       <div class="section-tree">
          {{#each sections}}
-         {{#is name 'Notes de mises à jour'}}
-         <section class="section">
-            <h3 class="page-section-tree-title">
-               <a href='{{url}}' class="page-section-tree-title">
-               <span class="page-section-tree-title">
-               {{name}}
-               </span>
-               </a>
-            </h3>
-            {{#if articles}}
-            <ul class="article-list">
-               {{#each articles}}
-               <li class="article-list-item{{#if promoted}} article-promoted{{/if}}">
-                  {{#if promoted}}
-                  <span data-title="{{t 'promoted'}}" class="icon-star"></span>
-                  {{/if}}
-                  <a href="{{url}}" class="article-list-link">{{title}}</a>
-                  {{#if internal}}
-                  <span class="icon-lock" title="{{t 'internal'}}"></span>
-                  {{/if}}
-               </li>
-               {{/each}}
-            </ul>
-            {{#if more_articles}}
-            <a href="{{url}}" class="see-all-articles">
-            {{t 'show_all_articles' count=article_count}}
-            </a>
-            {{/if}}
-            {{/if}}
-         </section>
-         {{/is}}
-         {{#is name 'Agenda Webformations'}}
+                  {{#is description 'ontop'}}
          <section class="section">
             <h3 class="page-section-tree-title">
                <a href='{{url}}' class="page-section-tree-title">
@@ -265,19 +220,21 @@ window.onload = function () { Show("SDS");	};
    <div class="category-content">
       <div id="main-content" class="section-tree">
          {{#each sections}}
-         {{#is name 'Notes de mises à jour'}}
-         {{else}}
-         {{#is name 'Agenda Webformations'}}
+         {{#is description 'ontop'}}
          {{else}}
          <li class="blocks-item">
             <a href='{{url}}' class="blocks-item-link">
                <span class="blocks-item-title">
                {{name}}
                </span>
-               <span class="blocks-item-description">{{excerpt description}}</span>
+               <span class="blocks-item-description">
+			   {{#is description 'ontop'}}
+			   {{else}}
+			   {{excerpt description}}
+			   {{/is}}
+			   </span>
             </a>
          </li>
-         {{/is}}
          {{/is}}
          {{/each}}
       </div>
