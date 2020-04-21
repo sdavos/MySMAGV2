@@ -1934,7 +1934,7 @@ display: none;
 
 @media (min-width: 1024px) {
   .section-content {
-    flex: 1 1 100%;
+    flex: 0 0 100%;
   }
 }
 
