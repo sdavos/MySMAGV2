@@ -74,8 +74,11 @@
 					{{#is id 1234567}}
                        <a href='{{url}}' class="logoCategory" style="background-image: url({{asset 'datalabs_gris.svg'}})" onmouseover="this.style.backgroundImage='url({{asset 'datalabs_blanc.svg'}})';" onmouseout="this.style.backgroundImage='url({{asset 'datalabs_gris.svg'}})';" > </a>
                     {{else}} 
+					{{#is id 360001298577}}
+					 <a href='{{url}}' class="logoCategory" style="background-image: url({{asset 'MySmag_Aide.png'}})" onmouseover="this.style.backgroundImage='url({{asset 'MySmag_Aide_Hover.png'}})';" onmouseout="this.style.backgroundImage='url({{asset 'MySmag_Aide.png'}})';" > </a>
+					{{else}} 
 					<!--autres-->
-                    <a href='{{url}}' class="testOther blocks-item-link">{{name}}</a>  {{/is}} {{/is}} {{/is}} {{/is}} {{/is}} {{/is}} {{/is}}
+                    <a href='{{url}}' class="testOther blocks-item-link">{{name}}</a>  {{/is}} {{/is}} {{/is}} {{/is}} {{/is}} {{/is}} {{/is}}{{/is}}
               
             </li>
         {{/is}}
