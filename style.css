@@ -1908,12 +1908,12 @@ display: none;
 
 .section-tree .see-all-articles {
   display: block;
-  padding: 15px 0;
+  padding: 15px 10px;
 }
 
 .article-list-item {
   font-size: 16px;
-  padding: 15px 0;
+  padding: 15px 10px;
 }
 
 .article-list-item a {
