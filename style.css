@@ -1541,7 +1541,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   min-height: 50px;
   padding-bottom: 15px;
 }
@@ -1676,7 +1676,7 @@ ul {
 
 @media (min-width: 768px) {
   .section {
-    margin-bottom: 60px;
+    margin-bottom: 10px;
   }
 }
 
