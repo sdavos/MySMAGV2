@@ -1,7 +1,7 @@
 {
   "name": "MySMAGV2_APIV2",
   "author": "Zendesk",
-  "version": "2.0.03.9",
+  "version": "2.0.04.0",
   "api_version": 2,
   "default_locale": "fr",
   "settings": [{
