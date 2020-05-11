@@ -1542,8 +1542,8 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 10px;
-  min-height: 50px;
-  padding-bottom: 15px;
+  
+
 }
 
 @media (min-width: 768px) {
