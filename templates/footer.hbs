@@ -18,8 +18,8 @@
     	<div class="footer-col">
        <img src="{{asset 'mysmag-logo.svg'}}" alt="{{t 'home_page' name=help_center.name}}" style="width : 30%">
         <br/>
-Leader français de l’informatique agricole, SMAG <br/> conçoit et édite des logiciels destinés à la gestion <br/> des exploitations agricoles et à la traçabilité des<br/> productions.<br/>
-<a href="https://smag.tech/" target="_blank">EN SAVOIR PLUS</a></div>
+{{dc 'smag_details'}}
+<a href="https://smag.tech/" target="_blank">{{dc 'see_more'}}</a></div>
         <div class="footer-col">
         <ul class="mysmag-list">
          <!-- <li>
@@ -35,7 +35,7 @@ Leader français de l’informatique agricole, SMAG <br/> conçoit et édite des
           <a href="https://mysmag.tech/faqs/">{{dc 'faq'}}</a>
           </li>-->
           <li>
-          {{#link 'new_request' class='submit-a-request'}}Contact{{/link}}
+          {{#link 'new_request' class='submit-a-request'}}{{dc 'contact'}}{{/link}}
           </li>
         </ul>
       </div>
