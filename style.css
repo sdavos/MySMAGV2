@@ -900,7 +900,7 @@ ul {
 
 .user-nav {
   display: inline-block;
-  position: absolute;
+  /***position: absolute;***/
   white-space: nowrap;
 }
 
