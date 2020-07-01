@@ -13,6 +13,12 @@
 -->
 
 <div class="container-home">
+  {{#if signed_in}}
+   {{else}}
+   <section class="articles">
+    <h2>{{dc 'plus_d_articles'}}</h2>
+   </section>
+   {{/if}}
   {{#if promoted_articles}}
       <section class="articles">
         <h1>{{t 'promoted_articles'}}</h1>
