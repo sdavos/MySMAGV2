@@ -45,8 +45,29 @@
          {{/each}}
       </div>
       <!--ZONE REPARTITION DES SECTIONS VIGNE & VIN USINE AMONT & COLLECTE-->
-	  <!--vigneVin-->
+	  <!--backOffice-->
       {{#each sections}}
+      {{#if sections}}
+      {{#is id 360003118137}}
+      <div class="backOffice">
+          <img src="{{asset 'backOffice.svg'}}" /> 
+         <h2>{{dc 'back_office'}}</h2>
+      </div>
+      {{#if sections}}
+      <div class="section-tree">
+         {{#each sections}}
+         <li class="blocks-item">
+            <a href='{{url}}' class="blocks-item-link">
+               <span class="blocks-item-title">
+               {{name}}
+               </span>
+               <span class="blocks-item-description"><!--{{excerpt description}}--></span>
+            </a>
+         </li>
+         {{/each}} 
+      </div>
+      {{/if}}
+      {{else}}
       {{#is id 360002080817}}
       <div class="vigneVin">
          <img src="{{asset 'iconVigneVin.svg'}}" /> 
@@ -112,8 +133,10 @@
      
       {{/is}}
       {{/is}}
+     {{/is}}
+     {{/if}}
       {{/each}}
-     <div id="divers" class="amontCollecte" style="visibility: hidden;">
+     <div id="divers" class="divers" style="visibility: hidden;">
          
          <h2>{{dc 'divers'}}</h2>
       </div>
@@ -130,6 +153,9 @@
      {{else}}
 	 <!--vigneVin-->
      {{#is id 360002080817}}
+       {{else}}
+	 <!--backOffice-->
+     {{#is id 360003118137}}
      {{else}}
 	 <!--autre-->
       {{#if sections}}
@@ -161,6 +187,7 @@ window.onload = function () { Show("divers");	};
          </li> 
      {{/if}}
      {{/is}}
+       {{/is}}
       {{/is}}
      {{/is}}
       {{/is}}

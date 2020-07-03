@@ -14,7 +14,34 @@
   font-weight: bold;
   margin-top: 10px;
 }
+.divers{
+  overflow: auto;
+  margin-top: 40px;
+}
 
+.divers img {
+  float: left;
+  margin-right:10px;
+}
+
+.divers h2{
+  color: black;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.backOffice{
+  overflow: auto;
+  margin-top: 40px;
+}
+.backOffice img {
+  float: left;
+  margin-right:10px;
+}
+.backOffice h2{
+  color: black;
+  font-weight: bold;
+  margin-top: 10px;
+}
 .usine{
   overflow: auto;
   margin-top: 40px;
