@@ -21,6 +21,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
 var greetingplaceholderSpan = document.querySelector("span#dc_greetings_template");
   var placeholderQuery = document.querySelector("#query");
   placeholderQuery.placeholder = greetingplaceholderSpan.dataset.value;
+  
+   // Add vote up message
+ $(".article-vote-up").on('click', function() {
+   $(".article-vote-up").wrap('<div>Thank you!</div>');
+ });
+
+ // Add vote down message
+ $(".article-vote-down").on('click', function() {
+   $(".article-vote-down").wrap('<div>Sorry to hear that. Thanks for letting us know.</div>');
+ });
+
+ $(".article-vote-up, .article-vote-down").on('click', function() {
+   $(".article-vote-up, .article-vote-down, .article-votes-count, .article-votes-question").remove('');
+ });
+
+});
 });
 
 document.addEventListener('DOMContentLoaded', function() {
