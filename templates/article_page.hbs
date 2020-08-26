@@ -1,3 +1,16 @@
+<script>
+$( document ).ready(function() {
+$('.article-vote-controls').on('click',function(){
+setTimeout(function(){
+if ($('.article-vote-controls>a[title="No"]').attr('aria-selected')=='true') {
+$('.negative-followup__c').show(500);
+} else {
+$('.negative-followup__c').hide(150);
+}
+},600);
+});
+});
+</script>
 
 <div class="container">
   <nav class="sub-nav">
