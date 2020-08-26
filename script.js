@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 var greetingplaceholderSpan = document.querySelector("span#dc_greetings_template");
   var placeholderQuery = document.querySelector("#query");
   placeholderQuery.placeholder = greetingplaceholderSpan.dataset.value;
-  
+  /*
    // Add vote up message
  $(".article-vote-up").on('click', function() {
    $(".article-vote-up").wrap('<div>Thank you!</div>');
@@ -34,7 +34,7 @@ var greetingplaceholderSpan = document.querySelector("span#dc_greetings_template
 
  $(".article-vote-up, .article-vote-down").on('click', function() {
    $(".article-vote-up, .article-vote-down, .article-votes-count, .article-votes-question").remove('');
- });
+ });*/
 
 });
 
