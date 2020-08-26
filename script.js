@@ -29,7 +29,9 @@ var greetingplaceholderSpan = document.querySelector("span#dc_greetings_template
    $(".article-vote-down").wrap('<div>Nous sommes navrés. Pouvez-vous nous indiquer la raison de ce vote négatif dans les commentaires ci-dessous ?</div>');
  });
 
-
+$(".article-vote-down").on('click', function() {
+   $(".article-vote-up, .article-vote-down, .article-votes-count, .article-votes-question").remove('');
+ });
 
 });
 
