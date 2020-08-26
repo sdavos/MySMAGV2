@@ -37,7 +37,6 @@ var greetingplaceholderSpan = document.querySelector("span#dc_greetings_template
  });
 
 });
-});
 
 document.addEventListener('DOMContentLoaded', function() {
   // Key map
