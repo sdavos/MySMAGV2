@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Set your conditions here
       // Example with Org tags
       if (HelpCenter.user.organizations[c].tags.includes("deny_newticket_endusers")){
-         if (!HelpCenter.user.tags.includes("a") && !HelpCenter.user.tags.includes("b")){
+         if (!HelpCenter.user.tags.includes("initiateur") && !HelpCenter.user.tags.includes("technicien")){
          var element = document.getElementById("contactFormFooter");
         if(element!=null)
           {
