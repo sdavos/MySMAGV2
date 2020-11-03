@@ -1,6 +1,32 @@
 <div class="alertbox"></div>
 <a class="skip-navigation" tabindex="1" href="#main-content">{{t 'skip_navigation' }}</a>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+ var i = 0;
+    var my_condition = false;
+    for (var c in HelpCenter.user.organizations) {
+      // Set your conditions here
+      // Example with Org tags
+      if (HelpCenter.user.organizations[c].tags.includes("deny_newticket_endusers")){
+         if (!HelpCenter.user.tags.includes("a") && !HelpCenter.user.tags.includes("b")){
+         var element = document.getElementById("contactFormFooter");
+        if(element!=null)
+          {
+    			element.outerHTML = '{{dc 'contactYourTech'}}';
+            }
+         var element = document.getElementById("contactFormArticlePage");
+        if(element!=null)
+          {
+    			element.outerHTML = '{{dc 'contactYourTech'}}';
+            }
+      } 
+        } 
+      
+    }
 
+});
+
+</script>
 <header class="header">
   <div class="logo">
     {{#link 'help_center'}}
